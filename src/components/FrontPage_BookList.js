@@ -10,7 +10,7 @@ function BookList() {
   
     useEffect(() => {
       axios
-        .get("https://final-300346126.onrender.com/api/book-list")
+        .get("http://localhost:5000/api/book-list")
         .then((res) => {
           setBooks(res.data);
         })
@@ -26,7 +26,7 @@ function BookList() {
           headers: { "Content-Type": "application/json" },
         };
         
-        fetch(`https://final-300346126.onrender.com/api/book-list/${id}`, requestOptions)
+        fetch(`http://localhost:5000/api/book-list/${id}`, requestOptions)
           .then((response) => response.json())
           .then((data) => {
             console.log(data);
